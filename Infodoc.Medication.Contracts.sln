@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infodoc.Medication.Contracts", "Infodoc.Medication.Contracts\Infodoc.Medication.Contracts.csproj", "{4BA50B30-55E5-49ED-9C3D-58DDD537B1DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BA50B30-55E5-49ED-9C3D-58DDD537B1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA50B30-55E5-49ED-9C3D-58DDD537B1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA50B30-55E5-49ED-9C3D-58DDD537B1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA50B30-55E5-49ED-9C3D-58DDD537B1DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A37066C-5C44-4AB2-BE6B-8F6525F64E40}
+	EndGlobalSection
+EndGlobal
