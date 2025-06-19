@@ -27,6 +27,9 @@ jobs:
     - name: Pack NuGet package
       run: dotnet pack ./src/Infodoc.Medication.Contracts/Infodoc.Medication.Contracts.csproj --configuration Release --no-build -o ./nupkgs
 
+    - name: Show GitHub repository owner
+      run: echo "Repository owner is ${{ github.repository_owner }}"
+
     - name: Push to GitHub Packages
       run: dotnet nuget push ./nupkgs/*.nupkg \
         --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
