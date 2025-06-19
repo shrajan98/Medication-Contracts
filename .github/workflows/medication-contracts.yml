@@ -3,7 +3,7 @@ name: Publish NuGet Package
 on:
   push:
     branches:
-      - main   # or your target branch
+      - master   # or your target branch
 
 jobs:
   build-and-publish:
