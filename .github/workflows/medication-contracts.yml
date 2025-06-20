@@ -34,7 +34,9 @@ jobs:
       run: ls -R ./nupkgs
 
     - name: Push to GitHub Packages
-      run: dotnet nuget push ./nupkgs/*.nupkg \
-        --source "https://nuget.pkg.github.com/shrajan98/index.json" \
-        --api-key ${{ secrets.SB_PAT }}
+      run: |
+            dotnet nuget push ./nupkgs/*.nupkg \
+            --source "https://nuget.pkg.github.com/shrajan98/index.json" \
+            --api-key ${{ secrets.GH_PAT }}
+
 
