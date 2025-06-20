@@ -37,6 +37,6 @@ jobs:
       run: |
             dotnet nuget push ./nupkgs/*.nupkg \
             --source "https://nuget.pkg.github.com/shrajan98/index.json" \
-            --api-key ${{ secrets.GH_PAT }}
+            --api-key ${{ secrets.SB_PAT }}
 
 
