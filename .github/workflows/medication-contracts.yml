@@ -3,7 +3,7 @@ name: Publish NuGet Package
 on:
   push:
     branches:
-      - main   # or your target branch
+      - master   # or your target branch
 
 jobs:
   build-and-publish:
@@ -19,17 +19,22 @@ jobs:
         dotnet-version: '8.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/Infodoc.Medication.Contracts/Infodoc.Medication.Contracts.csproj
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ./src/Infodoc.Medication.Contracts/Infodoc.Medication.Contracts.csproj --configuration Release --no-restore
 
     - name: Pack NuGet package
-      run: dotnet pack --configuration Release --no-build -o ./nupkgs
+      run: dotnet pack ./src/Infodoc.Medication.Contracts/Infodoc.Medication.Contracts.csproj --configuration Release --no-build -o ./nupkgs
+
+    - name: Show GitHub repository owner
+      run: echo "Repository owner is ${{ github.repository_owner }}"
+
+    - name: List .nupkg files
+      run: ls -R ./nupkgs
 
     - name: Push to GitHub Packages
       run: dotnet nuget push ./nupkgs/*.nupkg \
-        --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
+        --source "https://nuget.pkg.github.com/shrajan98/index.json" \
         --api-key ${{ secrets.SB_PAT }}
-
 
