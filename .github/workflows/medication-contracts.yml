@@ -30,9 +30,11 @@ jobs:
     - name: Show GitHub repository owner
       run: echo "Repository owner is ${{ github.repository_owner }}"
 
-    - name: Push to GitHub Packages
-      run: dotnet nuget push **/*.nupkg \
-        --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" \
-        --api-key ${{ secrets.SB_PAT }}
+    - name: List .nupkg files
+      run: ls -R ./nupkgs
 
+    - name: Push to GitHub Packages
+      run: dotnet nuget push ./nupkgs/*.nupkg \
+        --source "https://nuget.pkg.github.com/shrajan98/index.json" \
+        --api-key ${{ secrets.GH_PAT }}
 
