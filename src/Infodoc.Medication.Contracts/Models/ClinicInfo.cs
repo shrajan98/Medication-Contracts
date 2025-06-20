@@ -22,7 +22,6 @@ namespace Infodoc.Medication.Contracts.Models
 
         public bool IsAdminInSfm { get; set; }
 
-
     }
 
 }
